@@ -1,3 +1,3 @@
 #!/bin/bash
-docker pull node
+docker pull ubuntu
 docker build -t dalraf/minecraftproxy .
