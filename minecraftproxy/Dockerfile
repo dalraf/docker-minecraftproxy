@@ -1,10 +1,10 @@
-FROM node
+FROM java
 
-ADD https://github.com/brandon15811/Minecraft-PE-Proxy/archive/master.zip /master.zip
+ADD dragonproxy.jar /
 
-RUN  apt-get update ; apt-get install unzip && unzip master.zip && cd /Minecraft-PE-Proxy-master && npm install --production
+ADD config.yml /
 
 EXPOSE 19132
 
-CMD ["node","/Minecraft-PE-Proxy-master/mcpeproxy.js" "--serverip","minecraftserver"]
+CMD ["java","-jar","dragonproxy.jar"]
 
